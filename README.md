@@ -1,4 +1,4 @@
-# Cricket Team
+# Product
 
 Given two files `app.js` and a database file `product.db` consisting a table `product`.
 
