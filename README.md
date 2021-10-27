@@ -1,35 +1,34 @@
 # Cricket Team
 
-Given two files `app.js` and a database file `cricketTeam.db` consisting a table `cricket_team`.
+Given two files `app.js` and a database file `product.db` consisting a table `product`.
 
-Write APIs to perform operations on the table `cricket_team` containing the following columns,
+Write APIs to perform operations on the table `product` containing the following columns,
 
-| Columns       | Type    |
-| ------------- | ------- |
-| player_id     | INTEGER |
-| player_name   | TEXT    |
-| jersey_number | INTEGER |
-| role          | TEXT    |
+| Columns        | Type    |
+| -------------- | ------- |
+| product_id     | INTEGER |
+| product_name   | TEXT    |
+| Item_number    | INTEGER |
 
 ### API 1
 
-#### Path: `/players/`
+#### Path: `/products/`
 
 #### Method: `GET`
 
 #### Description:
 
-Returns a list of all players in the team
+Returns a list of all products in the product table
 
 #### Response
 
 ```
 [
   {
-    playerId: 1,
-    playerName: "Lakshman",
-    jerseyNumber: 5,
-    role: "All-rounder"
+    productId: 1,
+    productName: "XXX",
+    itemNumber: 5,
+   
   },
 
   ...
@@ -38,92 +37,92 @@ Returns a list of all players in the team
 
 ### API 2
 
-#### Path: `/players/`
+#### Path: `/products/`
 
 #### Method: `POST`
 
 #### Description:
 
-Creates a new player in the team (database). `player_id` is auto-incremented
+Creates a new product in the table (database). `product_id` is auto-incremented
 
 #### Request
 
 ```
 {
-  "playerName": "Vishal",
-  "jerseyNumber": 17,
-  "role": "Bowler"
+  "productName": "YYY",
+  "itemNumber": 17,
+  
 }
 ```
 
 #### Response
 
 ```
-Player Added to Team
+Product Added to Table
 ```
 
 ### API 3
 
-#### Path: `/players/:playerId/`
+#### Path: `/product/:productId/`
 
 #### Method: `GET`
 
 #### Description:
 
-Returns a player based on a player ID
+Returns a product based on a product ID
 
 #### Response
 
 ```
 {
-  playerId: 1,
-  playerName: "Lakshman",
-  jerseyNumber: 5,
-  role: "All-rounder"
+  productId: 1,
+  productName: "ZZZ",
+  itemNumber: 5,
+  
 }
 ```
 
 ### API 4
 
-#### Path: `/players/:playerId/`
+#### Path: `/products/:productId/`
 
 #### Method: `PUT`
 
 #### Description:
 
-Updates the details of a player in the team (database) based on the player ID
+Updates the details of a product in the team (database) based on the product ID
 
 #### Request
 
 ```
 {
-  "playerName": "Maneesh",
-  "jerseyNumber": 54,
-  "role": "All-rounder"
+  "productName": "EEE",
+  "itemNumber": 54,
+  
 }
 ```
 
 #### Response
 
 ```
-Player Details Updated
+Product Details Updated
 
 ```
 
 ### API 5
 
-#### Path: `/players/:playerId/`
+#### Path: `/products/:productId/`
 
 #### Method: `DELETE`
 
 #### Description:
 
-Deletes a player from the team (database) based on the player ID
+Deletes a product from the table (database) based on the product ID
 
 #### Response
 
 ```
-Player Removed
+Product Removed
 ```
 
 <br/>
